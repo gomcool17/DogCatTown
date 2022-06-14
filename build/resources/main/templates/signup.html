@@ -19,22 +19,22 @@
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">이름</label>
-            <input type="email" class="form-control" id="name" placeholder="홍길동">
+            <input type="email" class="form-control" id="name" placeholder="홍길동" th:field="*{name}">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">이메일(아이디)</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" th:field="*{email}">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">비밀번호</label>
-            <input type="email" class="form-control" id="passward" placeholder="5~20자">
+            <input type="email" class="form-control" id="password" placeholder="5~20자" th:field="*{password}">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">닉네임</label>
-            <input type="email" class="form-control" id="nickname" placeholder="2~10자">
+            <input type="email" class="form-control" id="nickname" placeholder="2~10자" th:field="*{nickname}">
         </div>
         <div>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" th:field="*{city}">
                 <option selected>거주지역 선택</option>
                 <option value="1">서울</option>
                 <option value="2">경기</option>
