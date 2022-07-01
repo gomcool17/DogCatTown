@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 @Data
@@ -19,16 +20,15 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(name="hostId")
-    private Member host_id;
+    private User hostId;
     @Column(nullable = false, length = 50)
     private String name;
     @Column(nullable = false, length = 50)
     private String sex;
     @Column(nullable = false, length = 50)
-    private String kind;
-    @Column(nullable = false, length = 50)
-    private String what;
+    private Date birthday;
+    @ManyToOne
+    private SubKind kind;
 
     @CreationTimestamp
     private Timestamp createDate;

@@ -21,13 +21,14 @@ public class Board {
     private int id;
     @Column(nullable = false, length = 100)
     private String title;
-    @Lob
+    @Lob //large data
     private String content;
-    @ColumnDefault("0")
-    private int count;
+    @Column(columnDefinition = "integer default 0")
+    private Integer count;
     @ManyToOne
-    @JoinColumn(name = "memberId")
-    private Member member;
+    private User user;
+    @Column(columnDefinition = "integer default 0")
+    private Integer love;
 
     @CreationTimestamp
     private Timestamp createDate;
